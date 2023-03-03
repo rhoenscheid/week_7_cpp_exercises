@@ -4,15 +4,15 @@
 #include <vector>
 using std::vector;
 
-template<typename T>
-T Kahan_sum(const vector<T> &vals, const long N)
+template<typename FPtype>
+FPtype Kahan_sum(const vector<FPtype> &vals)
 {
-    T sum = 0;
-    T c = 0;
-    T y, t;
-    for (long i = 0; i < N; i++)
+    FPtype sum = 0;
+    FPtype c = 0;
+    FPtype y, t;
+    for (auto &x : vals)
     {
-        y = vals[i] - c;
+        y = x - c;
         t = sum + y;
         c = (t - sum) - y;
         sum = t;
@@ -22,12 +22,12 @@ T Kahan_sum(const vector<T> &vals, const long N)
 }
 
 template<typename T>
-T trivial_sum(const vector<T> &vals, const long N)
+T trivial_sum(const vector<T> &vals)
 {
     T sum = 0;
-    for(long i = 0; i < N; i++)
+    for(auto &x : vals)
     {
-        sum = sum + vals[i];
+        sum = sum + x;
     }
     return sum;
 }
