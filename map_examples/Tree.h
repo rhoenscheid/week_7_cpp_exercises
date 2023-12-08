@@ -1,5 +1,6 @@
 #include <stdexcept>
 #include <memory>
+#include <ostream>
 
 template<typename keyType, typename valType>
 class BinaryTree

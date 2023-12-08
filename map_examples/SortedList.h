@@ -1,5 +1,7 @@
+#include <ostream>
 #include <stdexcept>
 #include <vector>
+
 using std::vector;
 
 template<typename keyType, typename valType>
