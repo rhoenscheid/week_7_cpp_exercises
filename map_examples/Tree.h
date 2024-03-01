@@ -63,6 +63,13 @@ class BinaryTree
    }
 
     private:
+    /**
+     * @brief If child alreayd exists, call recursive insert on child sub-tree. Otherwise create new child node for k-v pair.
+     * 
+     * @param k key
+     * @param v value
+     * @param c pointer to child
+     */
     void insertChild(const keyType k, const valType v, std::unique_ptr<BinaryTree> &c)
     {
         if(c)
@@ -76,6 +83,13 @@ class BinaryTree
         }
     }
 
+    /**
+     * @brief If child exists, call recursive lookup on child sub-tree. Otherwise throw exception.
+     * 
+     * @param k key
+     * @param c pointer to child node
+     * @return valType 
+     */
     valType lookupChild(const keyType k, std::unique_ptr<BinaryTree> &c)
     {
         if(c)

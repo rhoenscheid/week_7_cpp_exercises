@@ -5,6 +5,13 @@
 
 using std::vector;
 
+/**
+ * @brief Table used for mapping key value pairs. 
+ * Each row is indexed by a hash function on the key. Key-value pairs which map to the same row are stored as an unsorted list.
+ * 
+ * @tparam keyType 
+ * @tparam valType 
+ */
 template<typename keyType, typename valType>
 class Table
 {
@@ -76,6 +83,12 @@ class Table
 
     private:
 
+    /**
+     * @brief Constant time hash function modulo size of table
+     * 
+     * @param key 
+     * @return int 
+     */
     int index(keyType key)
     {
         return hash(key) % size;

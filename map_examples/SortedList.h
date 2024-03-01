@@ -16,6 +16,12 @@ class SortedList
     public:
     SortedList(){}
 
+    /**
+     * @brief Insertion into sorted list. 
+     * 
+     * @param key 
+     * @param value 
+     */
     void insert(const keyType key, const valType value)
     {
         if(list.empty())
@@ -40,6 +46,12 @@ class SortedList
         }
     }
 
+    /**
+     * @brief Lookup by binary search algorithm
+     * 
+     * @param key 
+     * @return valType 
+     */
     valType lookup(keyType key)
     {
         if(list.empty()) throw std::runtime_error("Key not found.");
@@ -89,7 +101,7 @@ class SortedList
 
     private:
     // This method can be replaced by std lib vector::insert with the same 
-    // complexity but we have written it out explicitly. 
+    // complexity but we have written it out explicitly so you can see what is happening.
     void insertAndShift(const keyType key, const valType value, size_t i)
     {
         kv_pair buffer_pair;
