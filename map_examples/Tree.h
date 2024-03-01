@@ -64,7 +64,7 @@ class BinaryTree
 
     private:
     /**
-     * @brief If child alreayd exists, call recursive insert on child sub-tree. Otherwise create new child node for k-v pair.
+     * @brief If child already exists, call recursive insert on child sub-tree. Otherwise create new child node for k-v pair.
      * 
      * @param k key
      * @param v value
