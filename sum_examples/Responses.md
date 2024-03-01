@@ -8,4 +8,9 @@ time = 0.0023453
 
 ### For -ffast-math
 
-
+Result for Kahan Sum
+sum = 0.999044
+time = 0.000369539
+Result for Trivial Sum
+sum = 0.999044
+time = 0.000341344
